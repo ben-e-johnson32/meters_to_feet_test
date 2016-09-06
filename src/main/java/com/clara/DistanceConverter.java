@@ -2,29 +2,29 @@ package com.clara;
 
 import java.util.Scanner;
 
-public class DistanceConverter {
-
-    static Scanner numberScanner = new Scanner(System.in);
-    public static void main(String[] args) {
+public class DistanceConverter
+{
+    public static Scanner numberScanner = new Scanner(System.in);
+    public static void main(String[] args)
+    {
         // write your code here
 
-        System.out.println("Please type in a distance in meters:");
-        int meters = numberScanner.nextInt();
+        System.out.print("Please type in a distance in meters: ");
+        double meters = numberScanner.nextDouble();
 
-        int feet = metersToFeet(meters);
+        double feet = metersToFeet(meters);
 
-        System.out.println("In feet, that's " + feet + " ft");
+        System.out.println(meters + " meters = " + feet + " feet");
 
         // End of your code here
         numberScanner.close();
     }
 
 
-    public static int metersToFeet(int meters){
-        //TODO! This method doesn't work yet. Can you fix it?
-        //To convert meters to feet, multiply by 3
-
-        return 0;
+    public static double metersToFeet(double meters)
+    {
+        //To convert meters to feet, multiply by 3.28084
+        return meters * 3.28084;
     }
 
     // I know doubles would be more real world but we are keeping it simple
